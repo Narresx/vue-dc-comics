@@ -2,19 +2,14 @@
   <header>
     <nav>
       <figure>
-        <img src="@/assets/img/dc-logo.png" alt="Logo dc" />
+        <img src="../assets/img/dc-logo.png" alt="Logo dc" />
       </figure>
       <ul>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
-        <li><a href="#">CHARACTER</a></li>
+        <li v-for="(link, index) in links" :key="index">
+          <a :href="link.url" :class="{ active: link.active }">{{
+            link.text
+          }}</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -23,6 +18,22 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      links: [
+        { text: "CHARACTER", url: "#", active: false },
+        { text: "COMICS", url: "#", active: false },
+        { text: "MOVIES", url: "#", active: false },
+        { text: "TV", url: "#", active: false },
+        { text: "GAMES", url: "#", active: false },
+        { text: "COLLECTIBLES", url: "#", active: false },
+        { text: "VIDEOS", url: "#", active: false },
+        { text: "FANS", url: "#", active: false },
+        { text: "NEWS", url: "#", active: false },
+        { text: "SHOP", url: "#", active: false },
+      ],
+    };
+  },
 };
 </script>
 
@@ -47,7 +58,8 @@ li a {
   position: relative;
 }
 
-li a:hover {
+li a:hover,
+li a.active {
   color: blue;
 }
 </style>
