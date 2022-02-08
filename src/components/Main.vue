@@ -3,7 +3,7 @@
     <section class="container background-black">
       <div class="text-white">Content goes here</div>
     </section>
-    <section class="container background-lightblue d-flex">
+    <section class="container background-lightblue d-flex text-white">
       <nav>
         <figure>
           <img src="../assets/img/buy-comics-digital-comics.png" />
