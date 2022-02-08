@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 nav {
   display: flex;
   justify-content: space-between;
@@ -55,7 +55,6 @@ li a {
   padding: 0 10px;
   color: black;
   font-weight: bolder;
-  position: relative;
 }
 
 li a:hover,
