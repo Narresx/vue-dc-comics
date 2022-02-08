@@ -22,7 +22,7 @@
           <div>COMIC SHOP LOCATOR</div>
         </figure>
         <figure>
-          <img src="../assets/img/buy-comics-shop-locator.png" />
+          <img src="../assets/img/buy-dc-power-visa.svg" />
           <div>DC POWER VISA</div>
         </figure>
       </nav>
@@ -61,8 +61,12 @@ figure {
 }
 
 section figure img {
-  width: 25%;
-  height: auto;
+  width: 65px;
+  height: 65px;
+}
+
+figure div {
+  padding-left: 10px;
 }
 
 .d-flex {
