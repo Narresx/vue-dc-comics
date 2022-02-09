@@ -12,8 +12,8 @@
         />
       </div>
     </section>
-    <section class="container background-lightblue d-flex text-white">
-      <nav class="d-flex space-between">
+    <section class="container background-lightblue text-white">
+      <nav class="d-flex space-between padding-top">
         <figure>
           <img src="../assets/img/buy-comics-digital-comics.png" />
           <div>DIGITAL COMICS</div>
@@ -181,7 +181,7 @@ figure div {
 }
 
 .space-between {
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .container-jumbo {
@@ -203,5 +203,9 @@ section {
 .padding-top-bottom {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.padding-top {
+  padding-top: 100px;
 }
 </style>
