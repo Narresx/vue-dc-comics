@@ -1,6 +1,8 @@
 <template>
   <main>
-    <div class="container-jumbo"></div>
+    <div class="container-jumbo p-relative">
+      <div class="my-button-top">CURRENT SERIES</div>
+    </div>
     <section class="background-black">
       <div class="container-comic d-flex d-wrap padding-top-bottom">
         <CardsComponent
@@ -10,6 +12,7 @@
           :series="card.series"
           :type="card.type"
         />
+        <div class="my-button centered-item">LOAD MORE</div>
       </div>
     </section>
     <section class="container background-lightblue text-white">
@@ -172,6 +175,10 @@ figure div {
   padding-left: 10px;
 }
 
+.p-relative {
+  position: relative;
+}
+
 .d-flex {
   display: flex;
 }
@@ -203,6 +210,29 @@ section {
 .padding-top-bottom {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.my-button {
+  padding: 15px 20px;
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.my-button-top {
+  padding: 15px 20px;
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 50%);
+}
+
+.centered-item {
+  margin: 0 auto;
 }
 
 .padding-top {
