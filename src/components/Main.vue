@@ -1,13 +1,16 @@
 <template>
   <main>
+    <div class="container-jumbo"></div>
     <section class="background-black">
-      <CardsComponent
-        v-for="(card, index) in cards"
-        :key="index"
-        :thumb="card.thumb"
-        :series="card.series"
-        :type="card.type"
-      />
+      <div class="container-comic d-flex d-wrap padding-top-bottom">
+        <CardsComponent
+          v-for="(card, index) in cards"
+          :key="index"
+          :thumb="card.thumb"
+          :series="card.series"
+          :type="card.type"
+        />
+      </div>
     </section>
     <section class="container background-lightblue d-flex text-white">
       <nav class="d-flex space-between">
@@ -173,11 +176,32 @@ figure div {
   display: flex;
 }
 
+.d-wrap {
+  flex-wrap: wrap;
+}
+
 .space-between {
   justify-content: space-between;
 }
 
+.container-jumbo {
+  width: 100%;
+  height: 450px;
+  background-image: url("../assets/img/jumbotron.jpg");
+}
+
 section {
   min-height: 250px;
+}
+
+.container-comic {
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+}
+
+.padding-top-bottom {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 </style>
