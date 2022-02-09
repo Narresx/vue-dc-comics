@@ -4,7 +4,7 @@
       <div class="text-white">Content goes here</div>
     </section>
     <section class="container background-lightblue d-flex text-white">
-      <nav>
+      <nav class="d-flex space-between">
         <figure>
           <img src="../assets/img/buy-comics-digital-comics.png" />
           <div>DIGITAL COMICS</div>
@@ -39,7 +39,7 @@ export default {
 <style scoped>
 .container {
   margin: 0 auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 .text-white {
@@ -56,7 +56,6 @@ export default {
 nav,
 figure {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -71,6 +70,10 @@ figure div {
 
 .d-flex {
   display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 section {

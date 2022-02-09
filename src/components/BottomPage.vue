@@ -1,15 +1,17 @@
 <template>
   <div>
-    <div class="d-flex container background-gray">
+    <div
+      class="d-flex container space-between space-align-center background-gray"
+    >
       <div class="text-white">
         <a href="#"
           ><button class="button-style text-white">SIGN-UP NOW!</button></a
         >
       </div>
-      <div class="d-flex">
-        <div>
+      <div class="d-flex space-align-center">
+        <div class="d-flex space-between">
           <h2 class="text-blue">FOLLOW US</h2>
-          <figure v-for="card in cards" :key="card.url">
+          <figure v-for="card in cards" :key="card.url" class="paddig-icons">
             <img :src="require(`../assets/img/${card.url}`)" />
           </figure>
         </div>
@@ -25,7 +27,7 @@ export default {
   data() {
     return {
       cards: [
-        { url: "footer-fabook.png" },
+        { url: "footer-facebook.png" },
         { url: "footer-twitter.png" },
         { url: "footer-youtube.png" },
         { url: "footer-pinterest.png" },
@@ -43,8 +45,20 @@ export default {
   height: 100px;
 }
 
+.paddig-icons {
+  padding-left: 15px;
+}
+
 .d-flex {
   display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-align-center {
+  align-items: center;
 }
 
 .button-style {
@@ -63,6 +77,6 @@ export default {
 
 .container {
   width: 100%;
-  height: 200px;
+  height: 100px;
 }
 </style>
